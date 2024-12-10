@@ -89,18 +89,18 @@
     margin-right: auto; 
   }
 
-    #facebook-link {
-      display: block; /* Ensures the link is on its own line */
-      margin-top: 10px; /* Adds space above the link */
-      font-size: 1.2em; /* Adjust the font size */
-      color: #4a90e2; /* Facebook blue color */
-      text-decoration: none; /* Remove underline */
-      text-align: center; /* Center-align the link */
-    }
+#facebook-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1em;
+  color: #1da1f2; /* Facebook blue */
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    #facebook-link:hover {
-      text-decoration: underline; /* Add underline on hover for emphasis */
-    }
+#facebook-link:hover {
+  text-decoration: underline;
+}
   
   @keyframes fadeIn {
     0% {
