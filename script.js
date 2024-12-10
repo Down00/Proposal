@@ -11,56 +11,42 @@ const heart = document.getElementById('heart');
 const cryingGif = document.getElementById('crying-gif');
 const particlesContainer = document.getElementById('particles');
 
-// First intro fade-out, then show "Are you single?"
 setTimeout(() => {
   intro.style.display = 'none';
   secondIntro.style.display = 'block';
-}, 3000); // Wait 3 seconds
+}, 3000);
 
-// Handle "Yes" click for "Are you single?"
 singleYesBtn.addEventListener('click', () => {
   secondIntro.style.display = 'none';
   question.style.display = 'block';
   finalButtons.style.display = 'flex';
 });
 
-// Handle "No" click for "Are you single?"
 singleNoBtn.addEventListener('click', () => {
-  // Hide "Are you single?" and buttons
   secondIntro.style.opacity = '0';
   
-  // Show crying GIF
   cryingGif.style.display = 'block';
   cryingGif.innerHTML = '<img src="https://media.tenor.com/Mw5q8hX6NnIAAAAj/bubu-dudu-bubu.gif" alt="Crying" />';
   
-  // After 2 seconds, hide crying GIF and bring back text/buttons
   setTimeout(() => {
     cryingGif.style.display = 'none';
     secondIntro.style.opacity = '1';
-  }, 2000); // 2 seconds
+  }, 2000);
 });
 
 yesBtn.addEventListener('click', () => {
-  // Hide "Can you be my gf?" text
   question.style.display = 'none';
 
-  // Update message content and style
   message.textContent = 'SM Bicutan entrance at 4pm';
   message.style.display = 'block';
 
-  // Show the heart GIF
   heart.style.display = 'block';
 
-  // Hide the buttons
   yesBtn.style.display = 'none';
   noBtn.style.display = 'none';
-
-  // Generate particles for a celebratory effect (optional)
   generateParticles();
 });
 
-
-// Particle Effect
 function generateParticles() {
   for (let i = 0; i < 100; i++) {
     const particle = document.createElement('div');
