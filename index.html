@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="intro">
+      <h1>Hi, I'm Kaiz</h1>
+    </div>
+    
+    <div id="second-intro" style="display: none;">
+      <h2>Are you single?</h2>
+      <div class="buttons">
+        <button id="single-yes-btn" class="button">Yes</button>
+        <button id="single-no-btn" class="button">No</button>
+      </div>
+    </div>
+      
+    <div id="question" style="display: none;">
+      <h2>Can i purse you?</h2>
+    </div>
+    
+    <div class="buttons" id="final-buttons" style="display: none;">
+      <button id="yes-btn" class="button">Yes</button>
+    </div>
+    
+    <div id="message" style="display: none;"></div>
+    <div id="heart" class="heart" style="display: none;"></div>
+    <div id="crying-gif" class="crying-gif" style="display: none;"></div>
+    
+    <div id="particles"></div>
+  </div>
+  
+  <script src="script.js" type="module"></script>
+</body>
+</html>

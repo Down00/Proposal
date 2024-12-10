@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #1a1a1a; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .container {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  
+  h1 {
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-out;
+  }
+  
+  h2 {
+    font-size: 2.5em;
+    font-family: 'Roboto', sans-serif;
+    color: #ff4d4d; /* Bold red color */
+    animation: fadeInIntro 2s ease-out;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .button {
+    background-color: #333; /* Dark button background */
+    border: none;
+    color: #ff4d4d; /* Red accent color */
+    font-size: 1.5em;
+    padding: 20px 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease-out; /* Smooth transition for the button movement */
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    will-change: transform; /* Optimizing transform animation */
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+    background-color: #444;
+    color: #fff;
+  }
+  
+  #message {
+    margin-top: 30px;
+    font-size: 2em;
+    color: #ff4d4d; /* Bold red color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    text-align: center; /* Center-align the text */
+    animation: fadeIn 2s ease-in-out; /* Smooth fade-in animation */
+  }
+  
+  .heart {
+    margin-top: 20px; /* Add spacing between text and heart */
+    width: 100px;
+    height: 100px;
+    background: url('https://media.tenor.com/r6DufHslD3oAAAAj/peach-goma-kissing.gif') no-repeat center center;
+    background-size: cover;
+    display: none; /* Initially hidden */
+    animation: float 3s infinite ease-in-out; /* Floating effect for the heart */
+    margin-left: auto;
+    margin-right: auto; /* Center align */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInIntro {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -60%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  /* Particle Effect */
+  #particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 182, 193, 0) 70%);
+    border-radius: 50%;
+    animation: floatParticle 2s ease-out infinite;
+  }
+
+  #second-intro {
+    transition: opacity 0.5s ease; /* Smooth fade-out effect */
+  }
+  
+  .crying-gif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden */
+  }
+  
+  .crying-gif img {
+    width: 200px;
+    height: auto;
+  }
+  
+  @keyframes floatParticle {
+    0% {
+      opacity: 0.7;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100vh);
+    }
+  }
+  
