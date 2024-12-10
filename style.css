@@ -88,6 +88,19 @@
     margin-left: auto;
     margin-right: auto; 
   }
+
+    #facebook-link {
+      display: block; /* Ensures the link is on its own line */
+      margin-top: 10px; /* Adds space above the link */
+      font-size: 1.2em; /* Adjust the font size */
+      color: #4a90e2; /* Facebook blue color */
+      text-decoration: none; /* Remove underline */
+      text-align: center; /* Center-align the link */
+    }
+
+    #facebook-link:hover {
+      text-decoration: underline; /* Add underline on hover for emphasis */
+    }
   
   @keyframes fadeIn {
     0% {
