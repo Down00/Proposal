@@ -35,24 +35,18 @@ singleNoBtn.addEventListener('click', () => {
 });
 
 yesBtn.addEventListener('click', () => {
-  // Hide "Can you be my gf?" text
   question.style.display = 'none';
 
-  // Update message content and style
   message.innerHTML = `
     SM Bicutan entrance at 4pm<br>
     <a href="https://www.facebook.com/kaiz.239" target="_blank" id="facebook-link">https://www.facebook.com/kaiz.239</a>
   `;
   message.style.display = 'block';
 
-  // Show the heart GIF under the text
   heart.style.display = 'block';
 
-  // Hide the buttons
   yesBtn.style.display = 'none';
   noBtn.style.display = 'none';
-
-  // Generate particles for a celebratory effect (optional)
   generateParticles();
 });
 
