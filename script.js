@@ -38,7 +38,7 @@ yesBtn.addEventListener('click', () => {
   question.style.display = 'none';
 
   message.innerHTML = `
-    SM Bicutan entrance at 4pm ANYTIME<br>
+    TLC PARK ANYTIME<br>
     <a href="https://www.facebook.com/kaiz.239" target="_blank" id="facebook-link">https://www.facebook.com/kaiz.239</a>
   `;
   message.style.display = 'block';
